@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1911013D2B923F6800024DC8 /* BundleDecoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1911013C2B923F6800024DC8 /* BundleDecoding.swift */; };
+		1911013F2B92402600024DC8 /* DateFuture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1911013E2B92402600024DC8 /* DateFuture.swift */; };
+		191101432B92418200024DC8 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191101422B92418200024DC8 /* Quote.swift */; };
+		191101452B9241F500024DC8 /* MotivationalQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191101442B9241F500024DC8 /* MotivationalQuote.swift */; };
+		191101472B9242F100024DC8 /* Pictures.json in Resources */ = {isa = PBXBuildFile; fileRef = 191101462B9242F100024DC8 /* Pictures.json */; };
+		191101492B92431500024DC8 /* Quotes.json in Resources */ = {isa = PBXBuildFile; fileRef = 191101482B92431500024DC8 /* Quotes.json */; };
 		1945B5B82B8FC6FF0075BFEF /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 1945B5B72B8FC6FF0075BFEF /* SwiftUICharts */; };
 		1979292C2B8C098E008A4A5E /* iReadyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1979292B2B8C098E008A4A5E /* iReadyApp.swift */; };
 		1979292E2B8C098E008A4A5E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1979292D2B8C098E008A4A5E /* ContentView.swift */; };
@@ -42,6 +48,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1911013C2B923F6800024DC8 /* BundleDecoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleDecoding.swift; sourceTree = "<group>"; };
+		1911013E2B92402600024DC8 /* DateFuture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFuture.swift; sourceTree = "<group>"; };
+		191101422B92418200024DC8 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		191101442B9241F500024DC8 /* MotivationalQuote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotivationalQuote.swift; sourceTree = "<group>"; };
+		191101462B9242F100024DC8 /* Pictures.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Pictures.json; sourceTree = "<group>"; };
+		191101482B92431500024DC8 /* Quotes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Quotes.json; sourceTree = "<group>"; };
 		197929282B8C098E008A4A5E /* iReady.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iReady.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1979292B2B8C098E008A4A5E /* iReadyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iReadyApp.swift; sourceTree = "<group>"; };
 		1979292D2B8C098E008A4A5E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -140,6 +152,7 @@
 				1979296A2B8C113B008A4A5E /* OnboardingView.swift */,
 				1979296C2B8C1149008A4A5E /* CompletionView.swift */,
 				1979296E2B8C115A008A4A5E /* OptionalProgressTrackingView.swift */,
+				191101442B9241F500024DC8 /* MotivationalQuote.swift */,
 			);
 			path = VIews;
 			sourceTree = "<group>";
@@ -150,6 +163,9 @@
 				197929412B8C0B61008A4A5E /* Task.swift */,
 				197929432B8C0B7D008A4A5E /* ProductivityStatistics.swift */,
 				197929452B8C0BD5008A4A5E /* MotivationalReminder.swift */,
+				1911013C2B923F6800024DC8 /* BundleDecoding.swift */,
+				1911013E2B92402600024DC8 /* DateFuture.swift */,
+				191101422B92418200024DC8 /* Quote.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -194,6 +210,8 @@
 			children = (
 				197929622B8C0F2D008A4A5E /* AppDelegate.swift */,
 				197929642B8C0F38008A4A5E /* SceneDelegate.swift */,
+				191101462B9242F100024DC8 /* Pictures.json */,
+				191101482B92431500024DC8 /* Quotes.json */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -262,6 +280,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				191101492B92431500024DC8 /* Quotes.json in Resources */,
+				191101472B9242F100024DC8 /* Pictures.json in Resources */,
 				197929332B8C098F008A4A5E /* Preview Assets.xcassets in Resources */,
 				197929302B8C098F008A4A5E /* Assets.xcassets in Resources */,
 			);
@@ -274,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				191101452B9241F500024DC8 /* MotivationalQuote.swift in Sources */,
 				1979296D2B8C1149008A4A5E /* CompletionView.swift in Sources */,
 				1979293D2B8C0A89008A4A5E /* TaskList.swift in Sources */,
 				197929502B8C0CF4008A4A5E /* ProductivityManager.swift in Sources */,
@@ -286,12 +307,15 @@
 				1979294B2B8C0C7A008A4A5E /* StatisticsViewModel.swift in Sources */,
 				197929692B8C1126008A4A5E /* MotivationalReminderView.swift in Sources */,
 				1979293F2B8C0AA1008A4A5E /* StatisticsView.swift in Sources */,
+				1911013F2B92402600024DC8 /* DateFuture.swift in Sources */,
+				1911013D2B923F6800024DC8 /* BundleDecoding.swift in Sources */,
 				1979297F2B8C1256008A4A5E /* Constants.swift in Sources */,
 				1979292E2B8C098E008A4A5E /* ContentView.swift in Sources */,
 				197929632B8C0F2D008A4A5E /* AppDelegate.swift in Sources */,
 				1979296B2B8C113B008A4A5E /* OnboardingView.swift in Sources */,
 				1979297B2B8C11F1008A4A5E /* OptionalProgressTrackingViewModel.swift in Sources */,
 				197929492B8C0C6B008A4A5E /* TaskListViewModel.swift in Sources */,
+				191101432B92418200024DC8 /* Quote.swift in Sources */,
 				1979297D2B8C1234008A4A5E /* UserAuthentication.swift in Sources */,
 				1979293B2B8C0A66008A4A5E /* MainView.swift in Sources */,
 				197929422B8C0B61008A4A5E /* Task.swift in Sources */,
@@ -444,6 +468,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -451,6 +476,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github-Z00K00.iReady";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -473,6 +502,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -480,6 +510,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github-Z00K00.iReady";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

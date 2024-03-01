@@ -61,11 +61,7 @@ struct Calendar: View {
 
             Divider()
 
-            // Your calendar implementation here
-            // For simplicity, you can use a library or create your own calendar view
-            // Implement a calendar view showing completed sessions and tasks
-            // You can use any available calendar libraries or create a custom calendar view
-            // For demo purposes, you can display the selected date
+            
             Text("Selected Date: \(selectedDate, formatter: dateFormatter)")
                 .padding()
         }
