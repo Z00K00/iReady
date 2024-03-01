@@ -7,10 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1945B5B82B8FC6FF0075BFEF /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 1945B5B72B8FC6FF0075BFEF /* SwiftUICharts */; };
 		1979292C2B8C098E008A4A5E /* iReadyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1979292B2B8C098E008A4A5E /* iReadyApp.swift */; };
 		1979292E2B8C098E008A4A5E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1979292D2B8C098E008A4A5E /* ContentView.swift */; };
 		197929302B8C098F008A4A5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1979292F2B8C098F008A4A5E /* Assets.xcassets */; };
 		197929332B8C098F008A4A5E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 197929322B8C098F008A4A5E /* Preview Assets.xcassets */; };
+		1979293B2B8C0A66008A4A5E /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1979293A2B8C0A66008A4A5E /* MainView.swift */; };
+		1979293D2B8C0A89008A4A5E /* TaskList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1979293C2B8C0A89008A4A5E /* TaskList.swift */; };
+		1979293F2B8C0AA1008A4A5E /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1979293E2B8C0AA1008A4A5E /* StatisticsView.swift */; };
+		197929422B8C0B61008A4A5E /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197929412B8C0B61008A4A5E /* Task.swift */; };
+		197929442B8C0B7D008A4A5E /* ProductivityStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197929432B8C0B7D008A4A5E /* ProductivityStatistics.swift */; };
+		197929462B8C0BD5008A4A5E /* MotivationalReminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197929452B8C0BD5008A4A5E /* MotivationalReminder.swift */; };
+		197929492B8C0C6B008A4A5E /* TaskListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197929482B8C0C6B008A4A5E /* TaskListViewModel.swift */; };
+		1979294B2B8C0C7A008A4A5E /* StatisticsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1979294A2B8C0C7A008A4A5E /* StatisticsViewModel.swift */; };
+		1979294E2B8C0CD7008A4A5E /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1979294D2B8C0CD7008A4A5E /* TaskManager.swift */; };
+		197929502B8C0CF4008A4A5E /* ProductivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1979294F2B8C0CF4008A4A5E /* ProductivityManager.swift */; };
+		197929522B8C0DD2008A4A5E /* MotivationalReminderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197929512B8C0DD2008A4A5E /* MotivationalReminderManager.swift */; };
+		197929632B8C0F2D008A4A5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197929622B8C0F2D008A4A5E /* AppDelegate.swift */; };
+		197929652B8C0F38008A4A5E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197929642B8C0F38008A4A5E /* SceneDelegate.swift */; };
+		197929672B8C1114008A4A5E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197929662B8C1114008A4A5E /* SettingsView.swift */; };
+		197929692B8C1126008A4A5E /* MotivationalReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197929682B8C1126008A4A5E /* MotivationalReminderView.swift */; };
+		1979296B2B8C113B008A4A5E /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1979296A2B8C113B008A4A5E /* OnboardingView.swift */; };
+		1979296D2B8C1149008A4A5E /* CompletionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1979296C2B8C1149008A4A5E /* CompletionView.swift */; };
+		1979296F2B8C115A008A4A5E /* OptionalProgressTrackingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1979296E2B8C115A008A4A5E /* OptionalProgressTrackingView.swift */; };
+		197929712B8C1185008A4A5E /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197929702B8C1185008A4A5E /* MainViewModel.swift */; };
+		197929732B8C1197008A4A5E /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197929722B8C1197008A4A5E /* SettingsViewModel.swift */; };
+		197929752B8C11B9008A4A5E /* MotivationalRemindersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197929742B8C11B9008A4A5E /* MotivationalRemindersViewModel.swift */; };
+		197929772B8C11D0008A4A5E /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197929762B8C11D0008A4A5E /* OnboardingViewModel.swift */; };
+		197929792B8C11DB008A4A5E /* CompletionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197929782B8C11DB008A4A5E /* CompletionViewModel.swift */; };
+		1979297B2B8C11F1008A4A5E /* OptionalProgressTrackingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1979297A2B8C11F1008A4A5E /* OptionalProgressTrackingViewModel.swift */; };
+		1979297D2B8C1234008A4A5E /* UserAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1979297C2B8C1234008A4A5E /* UserAuthentication.swift */; };
+		1979297F2B8C1256008A4A5E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1979297E2B8C1256008A4A5E /* Constants.swift */; };
+		197929812B8C125E008A4A5E /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197929802B8C125E008A4A5E /* Helpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +47,33 @@
 		1979292D2B8C098E008A4A5E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1979292F2B8C098F008A4A5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		197929322B8C098F008A4A5E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1979293A2B8C0A66008A4A5E /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		1979293C2B8C0A89008A4A5E /* TaskList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskList.swift; sourceTree = "<group>"; };
+		1979293E2B8C0AA1008A4A5E /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
+		197929412B8C0B61008A4A5E /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		197929432B8C0B7D008A4A5E /* ProductivityStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductivityStatistics.swift; sourceTree = "<group>"; };
+		197929452B8C0BD5008A4A5E /* MotivationalReminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotivationalReminder.swift; sourceTree = "<group>"; };
+		197929482B8C0C6B008A4A5E /* TaskListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewModel.swift; sourceTree = "<group>"; };
+		1979294A2B8C0C7A008A4A5E /* StatisticsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewModel.swift; sourceTree = "<group>"; };
+		1979294D2B8C0CD7008A4A5E /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
+		1979294F2B8C0CF4008A4A5E /* ProductivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductivityManager.swift; sourceTree = "<group>"; };
+		197929512B8C0DD2008A4A5E /* MotivationalReminderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotivationalReminderManager.swift; sourceTree = "<group>"; };
+		197929622B8C0F2D008A4A5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		197929642B8C0F38008A4A5E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		197929662B8C1114008A4A5E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		197929682B8C1126008A4A5E /* MotivationalReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotivationalReminderView.swift; sourceTree = "<group>"; };
+		1979296A2B8C113B008A4A5E /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		1979296C2B8C1149008A4A5E /* CompletionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionView.swift; sourceTree = "<group>"; };
+		1979296E2B8C115A008A4A5E /* OptionalProgressTrackingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalProgressTrackingView.swift; sourceTree = "<group>"; };
+		197929702B8C1185008A4A5E /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		197929722B8C1197008A4A5E /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		197929742B8C11B9008A4A5E /* MotivationalRemindersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotivationalRemindersViewModel.swift; sourceTree = "<group>"; };
+		197929762B8C11D0008A4A5E /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		197929782B8C11DB008A4A5E /* CompletionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionViewModel.swift; sourceTree = "<group>"; };
+		1979297A2B8C11F1008A4A5E /* OptionalProgressTrackingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalProgressTrackingViewModel.swift; sourceTree = "<group>"; };
+		1979297C2B8C1234008A4A5E /* UserAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthentication.swift; sourceTree = "<group>"; };
+		1979297E2B8C1256008A4A5E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		197929802B8C125E008A4A5E /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1945B5B82B8FC6FF0075BFEF /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +107,12 @@
 		1979292A2B8C098E008A4A5E /* iReady */ = {
 			isa = PBXGroup;
 			children = (
+				197929392B8C09AD008A4A5E /* VIews */,
+				197929472B8C0BDF008A4A5E /* ViewModels */,
+				197929402B8C0AD1008A4A5E /* Models */,
+				1979294C2B8C0CA8008A4A5E /* ControllerGroup */,
+				197929532B8C0E27008A4A5E /* UtilitiesGroup */,
+				1979295F2B8C0EEE008A4A5E /* SupportingFiles */,
 				1979292B2B8C098E008A4A5E /* iReadyApp.swift */,
 				1979292D2B8C098E008A4A5E /* ContentView.swift */,
 				1979292F2B8C098F008A4A5E /* Assets.xcassets */,
@@ -65,6 +127,75 @@
 				197929322B8C098F008A4A5E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		197929392B8C09AD008A4A5E /* VIews */ = {
+			isa = PBXGroup;
+			children = (
+				1979293A2B8C0A66008A4A5E /* MainView.swift */,
+				1979293C2B8C0A89008A4A5E /* TaskList.swift */,
+				1979293E2B8C0AA1008A4A5E /* StatisticsView.swift */,
+				197929662B8C1114008A4A5E /* SettingsView.swift */,
+				197929682B8C1126008A4A5E /* MotivationalReminderView.swift */,
+				1979296A2B8C113B008A4A5E /* OnboardingView.swift */,
+				1979296C2B8C1149008A4A5E /* CompletionView.swift */,
+				1979296E2B8C115A008A4A5E /* OptionalProgressTrackingView.swift */,
+			);
+			path = VIews;
+			sourceTree = "<group>";
+		};
+		197929402B8C0AD1008A4A5E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				197929412B8C0B61008A4A5E /* Task.swift */,
+				197929432B8C0B7D008A4A5E /* ProductivityStatistics.swift */,
+				197929452B8C0BD5008A4A5E /* MotivationalReminder.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		197929472B8C0BDF008A4A5E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				197929702B8C1185008A4A5E /* MainViewModel.swift */,
+				197929482B8C0C6B008A4A5E /* TaskListViewModel.swift */,
+				1979294A2B8C0C7A008A4A5E /* StatisticsViewModel.swift */,
+				197929722B8C1197008A4A5E /* SettingsViewModel.swift */,
+				197929742B8C11B9008A4A5E /* MotivationalRemindersViewModel.swift */,
+				197929762B8C11D0008A4A5E /* OnboardingViewModel.swift */,
+				197929782B8C11DB008A4A5E /* CompletionViewModel.swift */,
+				1979297A2B8C11F1008A4A5E /* OptionalProgressTrackingViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		1979294C2B8C0CA8008A4A5E /* ControllerGroup */ = {
+			isa = PBXGroup;
+			children = (
+				1979294D2B8C0CD7008A4A5E /* TaskManager.swift */,
+				197929512B8C0DD2008A4A5E /* MotivationalReminderManager.swift */,
+				1979294F2B8C0CF4008A4A5E /* ProductivityManager.swift */,
+				1979297C2B8C1234008A4A5E /* UserAuthentication.swift */,
+			);
+			path = ControllerGroup;
+			sourceTree = "<group>";
+		};
+		197929532B8C0E27008A4A5E /* UtilitiesGroup */ = {
+			isa = PBXGroup;
+			children = (
+				1979297E2B8C1256008A4A5E /* Constants.swift */,
+				197929802B8C125E008A4A5E /* Helpers.swift */,
+			);
+			path = UtilitiesGroup;
+			sourceTree = "<group>";
+		};
+		1979295F2B8C0EEE008A4A5E /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				197929622B8C0F2D008A4A5E /* AppDelegate.swift */,
+				197929642B8C0F38008A4A5E /* SceneDelegate.swift */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +214,9 @@
 			dependencies = (
 			);
 			name = iReady;
+			packageProductDependencies = (
+				1945B5B72B8FC6FF0075BFEF /* SwiftUICharts */,
+			);
 			productName = iReady;
 			productReference = 197929282B8C098E008A4A5E /* iReady.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +245,9 @@
 				Base,
 			);
 			mainGroup = 1979291F2B8C098E008A4A5E;
+			packageReferences = (
+				1945B5B62B8FC6FF0075BFEF /* XCRemoteSwiftPackageReference "SwiftUICharts" */,
+			);
 			productRefGroup = 197929292B8C098E008A4A5E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +274,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1979296D2B8C1149008A4A5E /* CompletionView.swift in Sources */,
+				1979293D2B8C0A89008A4A5E /* TaskList.swift in Sources */,
+				197929502B8C0CF4008A4A5E /* ProductivityManager.swift in Sources */,
+				197929672B8C1114008A4A5E /* SettingsView.swift in Sources */,
+				197929442B8C0B7D008A4A5E /* ProductivityStatistics.swift in Sources */,
+				197929462B8C0BD5008A4A5E /* MotivationalReminder.swift in Sources */,
+				1979294E2B8C0CD7008A4A5E /* TaskManager.swift in Sources */,
+				197929752B8C11B9008A4A5E /* MotivationalRemindersViewModel.swift in Sources */,
+				197929812B8C125E008A4A5E /* Helpers.swift in Sources */,
+				1979294B2B8C0C7A008A4A5E /* StatisticsViewModel.swift in Sources */,
+				197929692B8C1126008A4A5E /* MotivationalReminderView.swift in Sources */,
+				1979293F2B8C0AA1008A4A5E /* StatisticsView.swift in Sources */,
+				1979297F2B8C1256008A4A5E /* Constants.swift in Sources */,
 				1979292E2B8C098E008A4A5E /* ContentView.swift in Sources */,
+				197929632B8C0F2D008A4A5E /* AppDelegate.swift in Sources */,
+				1979296B2B8C113B008A4A5E /* OnboardingView.swift in Sources */,
+				1979297B2B8C11F1008A4A5E /* OptionalProgressTrackingViewModel.swift in Sources */,
+				197929492B8C0C6B008A4A5E /* TaskListViewModel.swift in Sources */,
+				1979297D2B8C1234008A4A5E /* UserAuthentication.swift in Sources */,
+				1979293B2B8C0A66008A4A5E /* MainView.swift in Sources */,
+				197929422B8C0B61008A4A5E /* Task.swift in Sources */,
+				197929772B8C11D0008A4A5E /* OnboardingViewModel.swift in Sources */,
+				1979296F2B8C115A008A4A5E /* OptionalProgressTrackingView.swift in Sources */,
+				197929652B8C0F38008A4A5E /* SceneDelegate.swift in Sources */,
 				1979292C2B8C098E008A4A5E /* iReadyApp.swift in Sources */,
+				197929712B8C1185008A4A5E /* MainViewModel.swift in Sources */,
+				197929792B8C11DB008A4A5E /* CompletionViewModel.swift in Sources */,
+				197929522B8C0DD2008A4A5E /* MotivationalReminderManager.swift in Sources */,
+				197929732B8C1197008A4A5E /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +508,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1945B5B62B8FC6FF0075BFEF /* XCRemoteSwiftPackageReference "SwiftUICharts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/willdale/SwiftUICharts";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.10.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1945B5B72B8FC6FF0075BFEF /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1945B5B62B8FC6FF0075BFEF /* XCRemoteSwiftPackageReference "SwiftUICharts" */;
+			productName = SwiftUICharts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 197929202B8C098E008A4A5E /* Project object */;
 }
