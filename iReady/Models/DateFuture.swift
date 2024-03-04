@@ -12,6 +12,6 @@ extension Date {
         var dateComponents = DateComponents()
         dateComponents.day = days
 
-        return Calendar.current.date(byAdding: dateComponents, to: self) ?? self
+        return Foundation.Calendar.current.date(byAdding: dateComponents, to: self) ?? self
     }
 }

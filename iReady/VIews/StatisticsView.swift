@@ -10,9 +10,9 @@ import SwiftUICharts // Import SwiftUICharts library
 
 struct StatisticsView: View {
     // Sample data for demonstration
-    let totalWorkTime: TimeInterval = 5000 // Example: 5000 seconds
-    let totalBreakTime: TimeInterval = 2000 // Example: 2000 seconds
-    let completedSessions: Int = 10 // Example: 10 completed sessions
+    @State private var totalWorkTime: TimeInterval = 5000 // Example: 5000 seconds
+    @State private var totalBreakTime: TimeInterval = 2000 // Example: 2000 seconds
+    @State private var completedSessions: Int = 10 // Example: 10 completed sessions
 
     // Sample data for productivity trends
     let productivityData: [Double] = [8, 23, 54, 32, 12, 37, 7, 23, 43] // Example data for productivity trends
@@ -23,29 +23,57 @@ struct StatisticsView: View {
                 .font(.title)
                 .padding()
             
-            HStack {
-                VStack {
+            HStack(spacing: 20) {
+                VStack(alignment: .leading, spacing: 10) {
                     Text("Total Work Time")
                     Text("\(formattedTime(totalWorkTime))")
                 }
                 .padding()
+                .background(
+                    RoundedRectangle(cornerRadius: 10)
+                        .foregroundColor(Color.gray.opacity(0.2))
+                )
                 
-                VStack {
+                VStack(alignment: .leading, spacing: 10) {
                     Text("Total Break Time")
                     Text("\(formattedTime(totalBreakTime))")
                 }
                 .padding()
+                .background(
+                    RoundedRectangle(cornerRadius: 10)
+                        .foregroundColor(Color.gray.opacity(0.2))
+                )
                 
-                VStack {
-                    Text("Completed Sessions")
-                    Text("\(completedSessions)")
+                VStack(alignment: .leading, spacing: 10) {
+                    Text("Completed")
+                    Text("Sessions \(completedSessions)")
                 }
                 .padding()
+                .background(
+                    RoundedRectangle(cornerRadius: 10)
+                        .foregroundColor(Color.gray.opacity(0.2))
+                )
             }
+            .padding()
             
             // Line chart for productivity trends
             LineChart(chartData: createLineChartData())
+                .frame(height: 300) // Adjust the height as needed
                 .padding()
+        }
+        .onDisappear {
+            // Save user data when the view disappears
+            UserDataManager.shared.saveTotalWorkTime(totalWorkTime)
+            UserDataManager.shared.saveTotalBreakTime(totalBreakTime)
+            UserDataManager.shared.saveCompletedSessions(completedSessions)
+            // No need to save productivityData as it's not modified in this view
+        }
+        .onAppear {
+            // Load user data when the view appears
+            totalWorkTime = UserDataManager.shared.getTotalWorkTime()
+            totalBreakTime = UserDataManager.shared.getTotalBreakTime()
+            completedSessions = UserDataManager.shared.getCompletedSessions()
+            // No need to load productivityData as it's not modified in this view
         }
     }
     
@@ -61,11 +89,13 @@ struct StatisticsView: View {
     // Create LineChartData from productivityData
     private func createLineChartData() -> LineChartData {
         let dataPoints = productivityData.enumerated().map { (index, value) in
-            return ChartDataPoint(value: value, xAxisLabel: "\(index)")
+            return LineChartDataPoint(value: value, xAxisLabel: "\(index)")
         }
-        return LineChartData(dataPoints: dataPoints, legendTitle: "Productivity Trends", metadata: "Daily")
+        let dataSet = LineDataSet(dataPoints: dataPoints)
+        return LineChartData(dataSets: dataSet)
     }
 }
+
 
 struct StatisticsView_Previews: PreviewProvider {
     static var previews: some View {

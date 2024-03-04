@@ -114,8 +114,8 @@ class ViewController: UIViewController {
             content.title = "Inner Peace"
             content.body = shuffled[i].text
 
-            let alertDate = Date().byAdding(days: i)
-            var alertComponents = Calendar.current.dateComponents([.day, .month, .year], from: alertDate)
+            let alertDate = Foundation.Calendar.current.date(byAdding: .day, value: i, to: Date())!
+            var alertComponents = Foundation.Calendar.current.dateComponents([.day, .month, .year], from: alertDate)
             alertComponents.hour = 10
 
 //          let trigger = UNCalendarNotificationTrigger(dateMatching: alertComponents, repeats: false)

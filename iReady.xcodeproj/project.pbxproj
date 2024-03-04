@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1911013D2B923F6800024DC8 /* BundleDecoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1911013C2B923F6800024DC8 /* BundleDecoding.swift */; };
-		1911013F2B92402600024DC8 /* DateFuture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1911013E2B92402600024DC8 /* DateFuture.swift */; };
 		191101432B92418200024DC8 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191101422B92418200024DC8 /* Quote.swift */; };
 		191101452B9241F500024DC8 /* MotivationalQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191101442B9241F500024DC8 /* MotivationalQuote.swift */; };
 		191101472B9242F100024DC8 /* Pictures.json in Resources */ = {isa = PBXBuildFile; fileRef = 191101462B9242F100024DC8 /* Pictures.json */; };
@@ -29,8 +28,6 @@
 		1979294E2B8C0CD7008A4A5E /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1979294D2B8C0CD7008A4A5E /* TaskManager.swift */; };
 		197929502B8C0CF4008A4A5E /* ProductivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1979294F2B8C0CF4008A4A5E /* ProductivityManager.swift */; };
 		197929522B8C0DD2008A4A5E /* MotivationalReminderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197929512B8C0DD2008A4A5E /* MotivationalReminderManager.swift */; };
-		197929632B8C0F2D008A4A5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197929622B8C0F2D008A4A5E /* AppDelegate.swift */; };
-		197929652B8C0F38008A4A5E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197929642B8C0F38008A4A5E /* SceneDelegate.swift */; };
 		197929672B8C1114008A4A5E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197929662B8C1114008A4A5E /* SettingsView.swift */; };
 		197929692B8C1126008A4A5E /* MotivationalReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197929682B8C1126008A4A5E /* MotivationalReminderView.swift */; };
 		1979296B2B8C113B008A4A5E /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1979296A2B8C113B008A4A5E /* OnboardingView.swift */; };
@@ -45,11 +42,12 @@
 		1979297D2B8C1234008A4A5E /* UserAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1979297C2B8C1234008A4A5E /* UserAuthentication.swift */; };
 		1979297F2B8C1256008A4A5E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1979297E2B8C1256008A4A5E /* Constants.swift */; };
 		197929812B8C125E008A4A5E /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197929802B8C125E008A4A5E /* Helpers.swift */; };
+		19C3C6D22B964AB800F200AD /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C3C6D12B964AB800F200AD /* UserData.swift */; };
+		19C3C6D42B96605000F200AD /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C3C6D32B96605000F200AD /* MainMenu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1911013C2B923F6800024DC8 /* BundleDecoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleDecoding.swift; sourceTree = "<group>"; };
-		1911013E2B92402600024DC8 /* DateFuture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFuture.swift; sourceTree = "<group>"; };
 		191101422B92418200024DC8 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		191101442B9241F500024DC8 /* MotivationalQuote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotivationalQuote.swift; sourceTree = "<group>"; };
 		191101462B9242F100024DC8 /* Pictures.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Pictures.json; sourceTree = "<group>"; };
@@ -70,8 +68,6 @@
 		1979294D2B8C0CD7008A4A5E /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
 		1979294F2B8C0CF4008A4A5E /* ProductivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductivityManager.swift; sourceTree = "<group>"; };
 		197929512B8C0DD2008A4A5E /* MotivationalReminderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotivationalReminderManager.swift; sourceTree = "<group>"; };
-		197929622B8C0F2D008A4A5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		197929642B8C0F38008A4A5E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		197929662B8C1114008A4A5E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		197929682B8C1126008A4A5E /* MotivationalReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotivationalReminderView.swift; sourceTree = "<group>"; };
 		1979296A2B8C113B008A4A5E /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
@@ -86,6 +82,8 @@
 		1979297C2B8C1234008A4A5E /* UserAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthentication.swift; sourceTree = "<group>"; };
 		1979297E2B8C1256008A4A5E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		197929802B8C125E008A4A5E /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		19C3C6D12B964AB800F200AD /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		19C3C6D32B96605000F200AD /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +151,7 @@
 				1979296C2B8C1149008A4A5E /* CompletionView.swift */,
 				1979296E2B8C115A008A4A5E /* OptionalProgressTrackingView.swift */,
 				191101442B9241F500024DC8 /* MotivationalQuote.swift */,
+				19C3C6D32B96605000F200AD /* MainMenu.swift */,
 			);
 			path = VIews;
 			sourceTree = "<group>";
@@ -164,8 +163,8 @@
 				197929432B8C0B7D008A4A5E /* ProductivityStatistics.swift */,
 				197929452B8C0BD5008A4A5E /* MotivationalReminder.swift */,
 				1911013C2B923F6800024DC8 /* BundleDecoding.swift */,
-				1911013E2B92402600024DC8 /* DateFuture.swift */,
 				191101422B92418200024DC8 /* Quote.swift */,
+				19C3C6D12B964AB800F200AD /* UserData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -208,8 +207,6 @@
 		1979295F2B8C0EEE008A4A5E /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
-				197929622B8C0F2D008A4A5E /* AppDelegate.swift */,
-				197929642B8C0F38008A4A5E /* SceneDelegate.swift */,
 				191101462B9242F100024DC8 /* Pictures.json */,
 				191101482B92431500024DC8 /* Quotes.json */,
 			);
@@ -297,6 +294,7 @@
 				191101452B9241F500024DC8 /* MotivationalQuote.swift in Sources */,
 				1979296D2B8C1149008A4A5E /* CompletionView.swift in Sources */,
 				1979293D2B8C0A89008A4A5E /* TaskList.swift in Sources */,
+				19C3C6D42B96605000F200AD /* MainMenu.swift in Sources */,
 				197929502B8C0CF4008A4A5E /* ProductivityManager.swift in Sources */,
 				197929672B8C1114008A4A5E /* SettingsView.swift in Sources */,
 				197929442B8C0B7D008A4A5E /* ProductivityStatistics.swift in Sources */,
@@ -307,11 +305,9 @@
 				1979294B2B8C0C7A008A4A5E /* StatisticsViewModel.swift in Sources */,
 				197929692B8C1126008A4A5E /* MotivationalReminderView.swift in Sources */,
 				1979293F2B8C0AA1008A4A5E /* StatisticsView.swift in Sources */,
-				1911013F2B92402600024DC8 /* DateFuture.swift in Sources */,
 				1911013D2B923F6800024DC8 /* BundleDecoding.swift in Sources */,
 				1979297F2B8C1256008A4A5E /* Constants.swift in Sources */,
 				1979292E2B8C098E008A4A5E /* ContentView.swift in Sources */,
-				197929632B8C0F2D008A4A5E /* AppDelegate.swift in Sources */,
 				1979296B2B8C113B008A4A5E /* OnboardingView.swift in Sources */,
 				1979297B2B8C11F1008A4A5E /* OptionalProgressTrackingViewModel.swift in Sources */,
 				197929492B8C0C6B008A4A5E /* TaskListViewModel.swift in Sources */,
@@ -321,7 +317,7 @@
 				197929422B8C0B61008A4A5E /* Task.swift in Sources */,
 				197929772B8C11D0008A4A5E /* OnboardingViewModel.swift in Sources */,
 				1979296F2B8C115A008A4A5E /* OptionalProgressTrackingView.swift in Sources */,
-				197929652B8C0F38008A4A5E /* SceneDelegate.swift in Sources */,
+				19C3C6D22B964AB800F200AD /* UserData.swift in Sources */,
 				1979292C2B8C098E008A4A5E /* iReadyApp.swift in Sources */,
 				197929712B8C1185008A4A5E /* MainViewModel.swift in Sources */,
 				197929792B8C11DB008A4A5E /* CompletionViewModel.swift in Sources */,

@@ -7,6 +7,7 @@
 
 import SwiftUI
 import UserNotifications
+import AudioToolbox // Import for playing sound
 
 struct MainView: View {
     @State private var workDuration: TimeInterval = 25 * 60
@@ -23,6 +24,9 @@ struct MainView: View {
     
     var body: some View {
         VStack {
+            Text(sessionType())
+                .font(.title)
+            
             Text(timerState.rawValue)
                 .font(.title)
             
@@ -90,12 +94,36 @@ struct MainView: View {
         .onReceive(NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification)) { _ in
             scheduleLocalNotification()
         }
+        .onAppear {
+            // Register for background task handling
+            NotificationCenter.default.addObserver(forName: UIApplication.willResignActiveNotification, object: nil, queue: .main) { _ in
+                self.startBackgroundTask()
+            }
+        }
+    }
+    
+    private func startBackgroundTask() {
+        DispatchQueue.global(qos: .background).async {
+            // Start your timer
+            self.startTimer()
+            
+            // Ensure the timer continues running even in the background
+            RunLoop.current.run()
+        }
     }
     
     private func startTimer() {
         workDuration = TimeInterval(customWorkDuration) * 60
         shortBreakDuration = TimeInterval(customShortBreakDuration) * 60
         longBreakDuration = TimeInterval(customLongBreakDuration) * 60
+        
+        if let soundURL = Bundle.main.url(forResource: "alarm", withExtension: "mp3") {
+               // Use the soundURL in your code
+               print("Sound file URL: \(soundURL)")
+        } else {
+            print("Unable to find the sound file.")
+        }
+           
         
         if timerState == .stopped {
             timerState = .running
@@ -110,14 +138,17 @@ struct MainView: View {
                         // Take a long break
                         workSessionEnded()
                         longBreakSessionStarted()
+                        playSound() // Play sound when session ends
                     } else if isWorkSession {
                         // Take a short break
                         workSessionEnded()
                         shortBreakSessionStarted()
+                        playSound() // Play sound when session ends
                     } else {
                         // Start a new work session
                         shortBreakSessionEnded()
                         workSessionStarted()
+                        playSound() // Play sound when session ends
                     }
                     scheduleLocalNotification()
                 }
@@ -135,14 +166,17 @@ struct MainView: View {
                         // Take a long break
                         workSessionEnded()
                         longBreakSessionStarted()
+                        playSound() // Play sound when session ends
                     } else if isWorkSession {
                         // Take a short break
                         workSessionEnded()
                         shortBreakSessionStarted()
+                        playSound() // Play sound when session ends
                     } else {
                         // Start a new work session
                         shortBreakSessionEnded()
                         workSessionStarted()
+                        playSound() // Play sound when session ends
                     }
                     scheduleLocalNotification()
                 }
@@ -213,6 +247,10 @@ struct MainView: View {
     }
     
     private func scheduleLocalNotification() {
+        guard timerState == .stopped else {
+            return // Do not schedule notification if the timer is not stopped
+        }
+        
         let center = UNUserNotificationCenter.current()
         center.requestAuthorization(options: [.alert, .sound]) { granted, error in
             if let error = error {
@@ -228,6 +266,22 @@ struct MainView: View {
                 
                 center.add(request)
             }
+        }
+    }
+
+    private func playSound() {
+        AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate)) // Vibrate
+        // You can also play a custom sound here, like this:
+        // AudioServicesPlayAlertSound(SystemSoundID(yourCustomSoundID))
+    }
+    
+    private func sessionType() -> String {
+        if isWorkSession {
+            return "Work Session"
+        } else if pomodoroCount % 4 == 0 {
+            return "Long Break"
+        } else {
+            return "Short Break"
         }
     }
 }

@@ -80,7 +80,7 @@ struct MotivationalRemindersView: View {
     private func loadSettings() {
         // Load notification settings
         // For demonstration, set default time to 8 AM
-        let calendar = Calendar.current
+        let calendar = Foundation.Calendar.current
         let defaultNotificationTime = calendar.date(bySettingHour: 8, minute: 0, second: 0, of: Date())
         notificationTime = defaultNotificationTime ?? Date()
     }
@@ -97,7 +97,7 @@ struct MotivationalRemindersView: View {
                 content.body = "Your daily motivational quote awaits!"
                 content.sound = UNNotificationSound.default
 
-                var dateComponents = Calendar.current.dateComponents([.hour, .minute], from: notificationTime)
+                var dateComponents = Foundation.Calendar.current.dateComponents([.hour, .minute], from: notificationTime)
                 dateComponents.weekday = 1 // Set to any day for weekly reminder
 
                 let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)

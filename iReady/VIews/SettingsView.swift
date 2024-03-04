@@ -8,45 +8,46 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @State private var workDuration: Double = 25
-    @State private var studyDuration: Double = 30
-    @State private var breakDuration: Double = 5
-    @State private var notificationEnabled: Bool = true
-    @State private var motivationalRemindersEnabled: Bool = false
+    // Define your statistics variables here
+    @State private var totalWorkTime: TimeInterval = 0
+    @State private var totalBreakTime: TimeInterval = 0
+    @State private var completedSessions: Int = 0
+    @State private var productivityData: [Double] = []
 
     var body: some View {
         VStack {
             Form {
-                Section(header: Text("Timer Durations")) {
-                    Slider(value: $workDuration, in: 5...60, step: 5, label: {
-                        Text("Work Duration: \(Int(workDuration)) minutes")
-                    })
-                    Slider(value: $studyDuration, in: 5...60, step: 5, label: {
-                        Text("Study Duration: \(Int(studyDuration)) minutes")
-                    })
-                    Slider(value: $breakDuration, in: 1...15, step: 1, label: {
-                        Text("Break Duration: \(Int(breakDuration)) minutes")
-                    })
-                }
-
-                Section(header: Text("Notification Preferences")) {
-                    Toggle("Enable Notifications", isOn: $notificationEnabled)
-                    Toggle("Enable Motivational Reminders", isOn: $motivationalRemindersEnabled)
-                }
-
                 Section(header: Text("App Settings")) {
                     Button("Reset Statistics") {
-                        // Implement logic to reset statistics
+                        // Call the function to reset statistics
+                        resetStatistics()
                     }
                 }
             }
             .navigationTitle("Settings")
         }
+        .onDisappear {
+            // Save user data when the view disappears
+            UserDataManager.shared.saveTotalWorkTime(totalWorkTime)
+            UserDataManager.shared.saveTotalBreakTime(totalBreakTime)
+            UserDataManager.shared.saveCompletedSessions(completedSessions)
+            // No need to save productivityData as it's not modified in this view
+        }
+        .onAppear {
+            // Load user data when the view appears
+            totalWorkTime = UserDataManager.shared.getTotalWorkTime()
+            totalBreakTime = UserDataManager.shared.getTotalBreakTime()
+            completedSessions = UserDataManager.shared.getCompletedSessions()
+            // No need to load productivityData as it's not modified in this view
+        }
     }
-}
-
-struct SettingsView_Previews: PreviewProvider {
-    static var previews: some View {
-        SettingsView()
+    
+    // Function to reset statistics
+    private func resetStatistics() {
+        // Reset all your statistics variables to their initial values
+        totalWorkTime = 0
+        totalBreakTime = 0
+        completedSessions = 0
+        productivityData = []
     }
 }
