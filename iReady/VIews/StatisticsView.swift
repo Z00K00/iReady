@@ -24,10 +24,22 @@ struct StatisticsView: View {
                 .padding()
             
             HStack(spacing: 20) {
-                VStack(alignment: .leading, spacing: 10) {
-                    Text("Total Work Time")
-                    Text("\(formattedTime(totalWorkTime))")
-                }
+                Text("Work Time\n\(formattedTime(totalWorkTime))")
+                    .minimumScaleFactor(0.6)
+                    .lineLimit(2)
+                    .multilineTextAlignment(.leading)
+                .frame(height: 50)
+                .padding()
+                .background(
+                    RoundedRectangle(cornerRadius: 10)
+                        .foregroundColor(Color.gray.opacity(0.2))
+                )
+                
+                Text("Break Time\n\(formattedTime(totalBreakTime))")
+                    .minimumScaleFactor(0.6)
+                    .lineLimit(2)
+                    .multilineTextAlignment(.leading)
+                .frame(height: 50)
                 .padding()
                 .background(
                     RoundedRectangle(cornerRadius: 10)
@@ -35,19 +47,12 @@ struct StatisticsView: View {
                 )
                 
                 VStack(alignment: .leading, spacing: 10) {
-                    Text("Total Break Time")
-                    Text("\(formattedTime(totalBreakTime))")
+                    Text("Sessions\n \(completedSessions)")
+                        .minimumScaleFactor(0.6)
+                        .lineLimit(2)
+                        .multilineTextAlignment(.leading)
                 }
-                .padding()
-                .background(
-                    RoundedRectangle(cornerRadius: 10)
-                        .foregroundColor(Color.gray.opacity(0.2))
-                )
-                
-                VStack(alignment: .leading, spacing: 10) {
-                    Text("Completed")
-                    Text("Sessions \(completedSessions)")
-                }
+                .frame(height: 50)
                 .padding()
                 .background(
                     RoundedRectangle(cornerRadius: 10)
