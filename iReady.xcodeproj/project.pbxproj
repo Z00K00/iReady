@@ -41,6 +41,7 @@
 		1979297D2B8C1234008A4A5E /* UserAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1979297C2B8C1234008A4A5E /* UserAuthentication.swift */; };
 		1979297F2B8C1256008A4A5E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1979297E2B8C1256008A4A5E /* Constants.swift */; };
 		197929812B8C125E008A4A5E /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197929802B8C125E008A4A5E /* Helpers.swift */; };
+		19A6F8602BAF47D8001D39D1 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A6F85F2BAF47D8001D39D1 /* WelcomeView.swift */; };
 		19C3C6D42B96605000F200AD /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C3C6D32B96605000F200AD /* MainMenu.swift */; };
 		19CF28552BA279DC00C14AC9 /* AnalyticsTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CF28542BA279DC00C14AC9 /* AnalyticsTracker.swift */; };
 /* End PBXBuildFile section */
@@ -80,6 +81,7 @@
 		1979297C2B8C1234008A4A5E /* UserAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthentication.swift; sourceTree = "<group>"; };
 		1979297E2B8C1256008A4A5E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		197929802B8C125E008A4A5E /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		19A6F85F2BAF47D8001D39D1 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		19C3C6D32B96605000F200AD /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
 		19CF28542BA279DC00C14AC9 /* AnalyticsTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsTracker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,6 +125,7 @@
 				1979295F2B8C0EEE008A4A5E /* SupportingFiles */,
 				1979292B2B8C098E008A4A5E /* iReadyApp.swift */,
 				1979292D2B8C098E008A4A5E /* ContentView.swift */,
+				19A6F85F2BAF47D8001D39D1 /* WelcomeView.swift */,
 				1979292F2B8C098F008A4A5E /* Assets.xcassets */,
 				197929312B8C098F008A4A5E /* Preview Content */,
 			);
@@ -307,6 +310,7 @@
 				1979296B2B8C113B008A4A5E /* OnboardingView.swift in Sources */,
 				1979297B2B8C11F1008A4A5E /* OptionalProgressTrackingViewModel.swift in Sources */,
 				197929492B8C0C6B008A4A5E /* TaskListViewModel.swift in Sources */,
+				19A6F8602BAF47D8001D39D1 /* WelcomeView.swift in Sources */,
 				191101432B92418200024DC8 /* Quote.swift in Sources */,
 				1979297D2B8C1234008A4A5E /* UserAuthentication.swift in Sources */,
 				1979293B2B8C0A66008A4A5E /* MainView.swift in Sources */,

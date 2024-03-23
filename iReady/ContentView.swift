@@ -8,55 +8,28 @@
 import SwiftUI
 import UserNotifications
 
-
-struct YourAppNameApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
+class RootNavigationManager: ObservableObject {
+    @Published var isShowingOnboarding = !UserDefaults.standard.bool(forKey: "hasCompletedOnboarding") {
+        didSet {
+            UserDefaults.standard.setValue(!isShowingOnboarding, forKey: "hasCompletedOnboarding")
         }
     }
 }
 
 struct ContentView: View {
+    @StateObject var rootNavigationManager = RootNavigationManager()
     var body: some View {
-        NavigationView {
-            VStack {
-                Spacer()
-
-                Image("iReady-2")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill) // Change contentMode to fill
-                    .frame(width: 250, height: 250)
-                    .clipShape(Circle())
-                    .shadow(radius: 10)
-                    .padding() // Add padding to main
-
-                Text("Welcome to iReady")
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .padding(.top, 20)
-                    
-                Text("Empower Your Productivity with iReady:\nTime Management, Tasks, Motivation, and Insights, \nAll in One Place!")
-                    .foregroundColor(.gray)
-                    .multilineTextAlignment(.center)
-                    .padding(.horizontal, 40)
-                    .padding(.bottom, 20)
-                    
-                NavigationLink(destination: MainMenu()) {
-                    Text("Get Started")
-                        .foregroundColor(.white)
-                        .padding()
-                        .frame(maxWidth: .infinity)
-                        .background(Color.blue)
-                        .cornerRadius(10)
-                        .padding(.horizontal, 20)
-                }
-                .padding(.bottom, 40)
-
-                Spacer()
+        VStack {
+            switch rootNavigationManager.isShowingOnboarding {
+            case true:
+                WelcomeView()
+                    .transition(.asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .leading)))
+            case false:
+                MainMenu()
+                    .transition(.asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .leading)))
             }
-            .navigationBarHidden(true)
         }
+        .environmentObject(rootNavigationManager)
     }
 }
 
