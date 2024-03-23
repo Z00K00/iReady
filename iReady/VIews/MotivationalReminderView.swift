@@ -8,7 +8,7 @@
 import SwiftUI
 import UserNotifications
 
-struct MotivationalRemindersView: View {
+struct MotivationalReminderView: View {
     @State private var reminders: [String] = [] // Array to store motivational reminders
     @State private var newReminder: String = "" // New reminder to be added
     @State private var notificationEnabled: Bool = false // Flag to enable/disable notifications
@@ -117,6 +117,6 @@ struct MotivationalRemindersView: View {
 
 struct MotivationalRemindersView_Previews: PreviewProvider {
     static var previews: some View {
-        MotivationalRemindersView()
+        MotivationalReminderView()
     }
 }

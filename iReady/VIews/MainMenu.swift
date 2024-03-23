@@ -47,14 +47,14 @@ struct MainMenu: View {
                     }
                 }
 
-                NavigationLink(destination: MotivationalReminderView()) {
-                    HStack {
-                        Image(systemName: "quote.bubble")
-                            .foregroundColor(.pink)
-                            .frame(width: 30, height: 30)
-                        Text("Motivational Reminder")
-                    }
-                }
+//                NavigationLink(destination: MotivationalReminderView()) {
+//                    HStack {
+//                        Image(systemName: "quote.bubble")
+//                            .foregroundColor(.pink)
+//                            .frame(width: 30, height: 30)
+//                        Text("Motivational Reminder")
+//                    }
+//                }
             }
             .navigationTitle("iReady")
         }
