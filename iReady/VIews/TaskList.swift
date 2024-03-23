@@ -12,21 +12,19 @@ struct TaskListView: View {
     @State private var newTaskText: String = ""
     
     var body: some View {
-        VStack {
+        List {
+            ForEach(tasks) { task in
+                TaskItemView(task: task, onDelete: { deleteTask(task) }, onToggle: { toggleTask(task) })
+            }
             HStack {
                 TextField("Enter a new task", text: $newTaskText)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                //                        .textFieldStyle(RoundedBorderTextFieldStyle())
                 Button(action: addTask) {
-                    Text("Add")
-                }
-            }
-            List {
-                ForEach(tasks) { task in
-                    TaskItemView(task: task, onDelete: { deleteTask(task) }, onToggle: { toggleTask(task) })
+                    Image(systemName: "plus.circle")
                 }
             }
         }
-        .padding()
+        .navigationTitle("Tasks")
     }
     
     private func addTask() {
