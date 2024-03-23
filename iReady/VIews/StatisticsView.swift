@@ -12,7 +12,8 @@ struct StatisticsView: View {
     // Grid Columns
     let columns = Array(repeating: GridItem(), count: 3)
     @ObservedObject var analyticsTracker = AnalyticsTracker.shared
-
+    @State var isShowingResetAlert = false
+    
     var body: some View {
         VStack {
             HStack(spacing: 20) {
@@ -80,6 +81,20 @@ struct StatisticsView: View {
         }
         .navigationTitle(Text("Productivity Statistics"))
         .navigationBarTitleDisplayMode(.large)
+        .toolbar(content: {
+            Button("Reset") {
+                // Call the function to reset statistics
+                isShowingResetAlert.toggle()
+            }
+            .foregroundStyle(.red)
+        })
+        .alert("Are You Sure?", isPresented: $isShowingResetAlert) {
+            Button("Reset", role: .destructive) {
+                analyticsTracker.resetData()
+            }
+        } message: {
+            Text("Resetting your statistics is a permanant action that cannot be undone.")
+        }
     }
     
     // Utility function to format time interval as string (HH:mm:ss)

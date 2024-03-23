@@ -38,14 +38,14 @@ struct MainMenu: View {
                     }
                 }
 
-                NavigationLink(destination: SettingsView()) {
-                    HStack {
-                        Image(systemName: "gear")
-                            .foregroundColor(.purple)
-                            .frame(width: 30, height: 30)
-                        Text("Settings")
-                    }
-                }
+//                NavigationLink(destination: SettingsView()) {
+//                    HStack {
+//                        Image(systemName: "gear")
+//                            .foregroundColor(.purple)
+//                            .frame(width: 30, height: 30)
+//                        Text("Settings")
+//                    }
+//                }
 
 //                NavigationLink(destination: MotivationalReminderView()) {
 //                    HStack {
