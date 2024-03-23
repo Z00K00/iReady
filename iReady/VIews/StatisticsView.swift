@@ -9,22 +9,14 @@ import SwiftUI
 import SwiftUICharts // Import SwiftUICharts library
 
 struct StatisticsView: View {
-    // Sample data for demonstration
-    @State private var totalWorkTime: TimeInterval = 5000 // Example: 5000 seconds
-    @State private var totalBreakTime: TimeInterval = 2000 // Example: 2000 seconds
-    @State private var completedSessions: Int = 10 // Example: 10 completed sessions
-
-    // Sample data for productivity trends
-    let productivityData: [Double] = [8, 23, 54, 32, 12, 37, 7, 23, 43] // Example data for productivity trends
+    // Grid Columns
+    let columns = Array(repeating: GridItem(), count: 3)
+    @ObservedObject var analyticsTracker = AnalyticsTracker.shared
 
     var body: some View {
         VStack {
-            Text("Productivity Statistics")
-                .font(.title)
-                .padding()
-            
             HStack(spacing: 20) {
-                Text("Work Time\n\(formattedTime(totalWorkTime))")
+                Text("Work Time\n\(formattedTime(analyticsTracker.totalWorkTime))")
                     .minimumScaleFactor(0.6)
                     .lineLimit(2)
                     .multilineTextAlignment(.leading)
@@ -35,7 +27,7 @@ struct StatisticsView: View {
                         .foregroundColor(Color.gray.opacity(0.2))
                 )
                 
-                Text("Break Time\n\(formattedTime(totalBreakTime))")
+                Text("Break Time\n\(formattedTime(analyticsTracker.totalBreakTime))")
                     .minimumScaleFactor(0.6)
                     .lineLimit(2)
                     .multilineTextAlignment(.leading)
@@ -47,7 +39,7 @@ struct StatisticsView: View {
                 )
                 
                 VStack(alignment: .leading, spacing: 10) {
-                    Text("Sessions\n \(completedSessions)")
+                    Text("Sessions\n \(analyticsTracker.totalSessions)")
                         .minimumScaleFactor(0.6)
                         .lineLimit(2)
                         .multilineTextAlignment(.leading)
@@ -61,43 +53,42 @@ struct StatisticsView: View {
             }
             .padding()
             
-            // Line chart for productivity trends
-            LineChart(chartData: createLineChartData())
-                .frame(height: 300) // Adjust the height as needed
-                .padding()
+            // Badges
+            ScrollView {
+                LazyVGrid(columns: columns, content: {
+                    ForEach(0..<25) { _ in
+                        Image(systemName: "seal")
+                            .resizable()
+                            .scaledToFit()
+                            .padding()
+                    }
+                })
+            }
+            .padding(.horizontal)
+            .foregroundStyle(.gray)
+            .disabled(true)
+            .opacity(0.6)
+            .overlay {
+                Text("Coming Soon") // Coming soon tag for badges
+                    .foregroundStyle(.white)
+                    .font(.title)
+                    .padding()
+                    .background(RoundedRectangle(cornerRadius: 12)
+                        .opacity(0.96))
+            }
+            
         }
-        .onDisappear {
-            // Save user data when the view disappears
-            UserDataManager.shared.saveTotalWorkTime(totalWorkTime)
-            UserDataManager.shared.saveTotalBreakTime(totalBreakTime)
-            UserDataManager.shared.saveCompletedSessions(completedSessions)
-            // No need to save productivityData as it's not modified in this view
-        }
-        .onAppear {
-            // Load user data when the view appears
-            totalWorkTime = UserDataManager.shared.getTotalWorkTime()
-            totalBreakTime = UserDataManager.shared.getTotalBreakTime()
-            completedSessions = UserDataManager.shared.getCompletedSessions()
-            // No need to load productivityData as it's not modified in this view
-        }
+        .navigationTitle(Text("Productivity Statistics"))
+        .navigationBarTitleDisplayMode(.large)
     }
     
     // Utility function to format time interval as string (HH:mm:ss)
-    private func formattedTime(_ timeInterval: TimeInterval) -> String {
+    private func formattedTime(_ timeInterval: Int) -> String {
         let formatter = DateComponentsFormatter()
         formatter.unitsStyle = .positional
         formatter.allowedUnits = [.hour, .minute, .second]
         formatter.zeroFormattingBehavior = .pad
-        return formatter.string(from: timeInterval)!
-    }
-
-    // Create LineChartData from productivityData
-    private func createLineChartData() -> LineChartData {
-        let dataPoints = productivityData.enumerated().map { (index, value) in
-            return LineChartDataPoint(value: value, xAxisLabel: "\(index)")
-        }
-        let dataSet = LineDataSet(dataPoints: dataPoints)
-        return LineChartData(dataSets: dataSet)
+        return formatter.string(from: TimeInterval(timeInterval))!
     }
 }
 
